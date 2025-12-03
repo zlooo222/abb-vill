@@ -11,8 +11,6 @@ body {
   gap: 20px;
 }
 
-
-
 .menu-checkbox {
   display: none;
 }
@@ -174,7 +172,10 @@ body {
 
 blockquote {
   background: #e6f7ff;
+  border-top: 1px solid #a3d2ca;
+  border-bottom: 1px solid #a3d2ca;
   border-left: 5px solid #a3d2ca;
+  border-right: 5px solid #a3d2ca;
   padding: 15px;
   border-radius: 15px;
   margin: 15px 0;
@@ -224,4 +225,68 @@ blockquote {
 
 .site-footer nav a:hover {
   color: #d45d79;
+}
+
+.theme-toggle {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.theme-toggle::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:checked + .theme-toggle::after {
+  transform: translateX(25px);
+}
+
+#theme-toggle:checked ~ .page {
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+#theme-toggle:checked ~ .page .nav,
+#theme-toggle:checked ~ .page .site-header,
+#theme-toggle:checked ~ .page .section.alt,
+#theme-toggle:checked ~ .page .hero,
+#theme-toggle:checked ~ .page blockquote,
+#theme-toggle:checked ~ .page .site-footer {
+  background: #2a2a3d;
+  color: #eee;
+}
+
+#theme-toggle:checked ~ .page .nav a,
+#theme-toggle:checked ~ .page .logo-text,
+#theme-toggle:checked ~ .page .site-footer nav a {
+  color: #f0f0f0;
+}
+
+#theme-toggle:checked ~ .page .card {
+  background: #2e2e3e;
+  border-color: #555;
+  color: #eee;
+}
+
+#theme-toggle:checked ~ .page .btn {
+  background: #5eaaa8;
+}
+
+#theme-toggle:checked ~ .page .btn:hover {
+  background: #3a7f7d;
 }
