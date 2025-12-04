@@ -227,6 +227,32 @@ blockquote {
   color: #d45d79;
 }
 
+.social-links {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.social-links span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.social-links a {
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-links a.facebook:hover {
+  color: #1877f2;
+}
+
+.social-links a.instagram:hover {
+  color: #e1306c;
+}
+
 .theme-toggle {
   width: 50px;
   height: 25px;
@@ -290,3 +316,4 @@ blockquote {
 #theme-toggle:checked ~ .page .btn:hover {
   background: #3a7f7d;
 }
+
